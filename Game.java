@@ -15,16 +15,20 @@ public class Game {
             this.player1 = new Player("user", 'X');
         } else if ("easy".equals(player1Type)) {
             this.player1 = new PcEasyMode('X');
-        } else {
+        } else if ("normal".equals(player1Type)) {
             this.player1 = new PcNormalMode('X');
+        } else {
+            this.player1 = new PcHardMode('X');
         }
 
         if ("user".equals(player2Type)) {
             this.player2 = new Player("user", 'O');
         } else if ("easy".equals(player2Type)) {
             this.player2 = new PcEasyMode('O');
-        } else {
+        } else if ("normal".equals(player2Type)){
             this.player2 = new PcNormalMode('O');
+        } else {
+            this.player2 = new PcHardMode('X');
         }
 
     }
